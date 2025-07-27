@@ -1,0 +1,6 @@
+# Depends on your env name
+conda activate AiCE_ProteinMPNN
+
+# Automated run AiCE pipeline
+cd /mnt/c/AiCE_Data/AiCE
+bash run_full_AiCE_pipeline.sh
