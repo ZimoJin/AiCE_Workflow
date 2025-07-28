@@ -1,2 +1,2 @@
 # AiCE_Workflow
-A modified AiCE work for AI-guided protein engineering
+A modified AiCE workflow for AI-guided protein engineering
