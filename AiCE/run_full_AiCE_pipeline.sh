@@ -23,9 +23,12 @@ cp -v output/single_result/* output/
 echo "===== [STEP 2] Calculating LD ====="
 #mkdir -p ld_output
 #python scripts/02.caculated_ld.py output ld_output
-cd /mnt/c/AiCE_Data/AiCE/scripts
-python ../scripts/02.caculated_ld.py ../output ../ld_output
-cd /mnt/c/AiCE_Data/AiCE
+# Step into the scripts folder
+%cd /content/AiCE_Workflow/AiCE/scripts
+# Run the Python script with adjusted paths
+!python 02.caculated_ld.py ../output ../ld_output
+# Step back to project root if needed
+%cd /content/AiCE_Workflow/AiCE
 mv -v ld_output output/
 cp -v output/ld_output/* output/
 
