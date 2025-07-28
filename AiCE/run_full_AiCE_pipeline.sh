@@ -21,16 +21,13 @@ bash scripts/01.post_mpnn_pipeline.sh scripts output output output
 cp -v output/single_result/* output/
 
 echo "===== [STEP 2] Calculating LD ====="
-#mkdir -p ld_output
-#python scripts/02.caculated_ld.py output ld_output
-# Step into the scripts folder
-%cd /content/AiCE_Workflow/AiCE/scripts
-# Run the Python script with adjusted paths
-!python 02.caculated_ld.py ../output ../ld_output
-# Step back to project root if needed
-%cd /content/AiCE_Workflow/AiCE
+mkdir -p ld_output
+cd scripts
+python 02.caculated_ld.py ../output ../ld_output
+cd ..
 mv -v ld_output output/
 cp -v output/ld_output/* output/
+
 
 echo "===== [STEP 3] Calculating SCA ====="
 mkdir -p sca_result
